@@ -1,0 +1,73 @@
+/* Custom Canvas Container styling */
+#dmbc-integrated-editor-root {
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    background: #ffffff;
+    margin: 20px 0;
+    min-height: 450px;
+    outline: none;
+}
+
+/* TipTap Editor ProseMirror editing frame rules */
+.ProseMirror {
+    padding: 20px;
+    min-height: 400px;
+    outline: none;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2c3338;
+}
+
+/* Placeholder support for empty lines */
+.ProseMirror p.is-editor-empty:first-child::before {
+    content: attr(data-placeholder);
+    float: left;
+    color: #a7aaad;
+    pointer-events: none;
+    height: 0;
+}
+
+/* ─── COLLABORATIVE CURSOR GRAPHICS ─── */
+
+/* The flashing vertical text entry line for remote users */
+.ProseMirror .collaboration-cursor__caret {
+    position: relative;
+    margin-left: -1px;
+    margin-right: -1px;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-color: currentColor;
+    word-break: normal;
+    pointer-events: none;
+    animation: cursor-blink 1.2s infinite;
+}
+
+/* Floating label tags showcasing the remote user's display name */
+.ProseMirror .collaboration-cursor__label {
+    position: absolute;
+    top: -1.4em;
+    left: -2px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    user-select: none;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px 3px 3px 0;
+    background: currentColor;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+@keyframes cursor-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}

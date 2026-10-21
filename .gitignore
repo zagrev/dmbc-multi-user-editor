@@ -1,0 +1,7 @@
+*.log
+hs_err_pid*
+replay_pid*
+.phpunit.cache/
+vendor/
+assets/node_modules/
+assets/editor-bundle.min.js

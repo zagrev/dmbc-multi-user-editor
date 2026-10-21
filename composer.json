@@ -1,0 +1,17 @@
+{
+  "name": "zagrev/dmbc-multi-user-editor",
+  "description": "Foundation for a WordPress editor that supports multiple simultaneous users.",
+  "type": "wordpress-plugin",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/zagrev/dmbc-multi-user-editor",
+  "require": {
+    "php": ">=8.0",
+    "yahnis-elsts/plugin-update-checker": "^5.7"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "scripts": {
+    "lint": "@php -l dmbc-multi-user-editor.php"
+  }
+}
